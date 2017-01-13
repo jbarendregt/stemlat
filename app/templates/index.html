@@ -9,6 +9,39 @@
 </div>
 <div>
     <h2>Wat vindt PARTIJ van THEMA ?</h2>
+
+</div>
+<div class="input-group input-group-lg">
+    <span class="input-group-addon" id="basic-addon1">Wat vindt</span>
+    <select class="form-control" id="theme" name="theme"><option value="2">Duurzaamheid</option><option value="1">Economie</option><option value="3">Staat</option></select>
+    <span class="input-group-addon" id="basic-addon1">Van</span>
+    <select class="form-control" id="theme" name="theme"><option value="2">Duurzaamheid</option><option value="1">Economie</option><option value="3">Staat</option></select>
+    <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+    </span>
+</div>
+
+<div>
+  <form class="form-inline">
+    <div class="form-group">
+      <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+      <div class="input-group">
+        <div class="input-group-addon">Wat vindt</d>
+        <select class="form-control">
+          {% for party in parties %}
+          <option>{{ party.party_name }}</option>
+          {% endfor %}
+        </select>
+        <div class="input-group-addon">van</div>
+        <select class="form-control">
+           {% for theme in themes %}
+          <option>{{ theme.theme_name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Transfer cash</button>
+  </form>
 </div>
 <div class="post-tabs">
 </div>
